@@ -12,7 +12,7 @@ class ruby-install {
   }->
 
   exec { 'uncompress_ruby':
-    command => 'tar -zxvf ~/source/ruby-2.0.0-p247.tar.gz',
+    command => 'tar -zxvf /root/source/ruby-2.0.0-p247.tar.gz',
     cwd     => '/root/source',
   }->
 
