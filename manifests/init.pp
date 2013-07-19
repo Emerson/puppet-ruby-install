@@ -17,18 +17,24 @@ class ruby-install {
   }->
 
   exec { 'configure_ruby':
-    command => '/root/source/ruby-2.0.0-p247/configure',
-    cwd     => '/root/source/ruby-2.0.0-p247',
+    command   => '/root/source/ruby-2.0.0-p247/configure',
+    cwd       => '/root/source/ruby-2.0.0-p247',
+    timeout   => 480,
+    logoutput => true,
   }->
 
   exec { 'make_ruby':
-    command => 'make',
-    cwd     => '/root/source/ruby-2.0.0-p247',
+    command   => 'make',
+    cwd       => '/root/source/ruby-2.0.0-p247',
+    timeout   => 480,
+    logoutput => true,
   }->
 
   exec { 'install_ruby':
-    command => 'make install',
-    cwd     => '/root/source/ruby-2.0.0-p247',
+    command   => 'make install',
+    cwd       => '/root/source/ruby-2.0.0-p247',
+    timeout   => 480,
+    logoutput => true,
   }
 
 }
