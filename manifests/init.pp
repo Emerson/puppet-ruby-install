@@ -1,5 +1,12 @@
 class ruby-install {
 
+  $essentials = ['build-essential', 'bison', 'openssl', 'libreadline6', 'libreadline6-dev',
+  'curl', 'git-core', 'zlib1g', 'zlib1g-dev', 'libssl-dev', 'libyaml-dev', 'libsqlite3-dev',
+  'sqlite3', 'libxml2-dev', 'libxslt1-dev', 'autoconf', 'libc6-dev', 'libncurses5-dev',
+  'automake', 'libtool', 'gcc-snapshot', 'libxslt-dev', 'ncurses-dev', 'nodejs', 'subversion']
+
+  package { $essentials: ensure => "installed" }->
+
   # Create the source folder
   file { '/root/source':
     ensure => 'directory',
