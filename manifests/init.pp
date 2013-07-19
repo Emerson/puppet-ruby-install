@@ -17,7 +17,7 @@ class ruby-install {
   }->
 
   exec { 'configure_ruby':
-    command => 'configure',
+    command => '/root/source/ruby-2.0.0-p247/configure',
     cwd     => '/root/source/ruby-2.0.0-p247',
   }->
 
