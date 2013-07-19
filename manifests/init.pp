@@ -11,22 +11,22 @@ class ruby-install {
     cwd     => '~/source',
   }->
 
-  exec { 'uncompress_ruby'
+  exec { 'uncompress_ruby':
     command => 'tar -zxvf ~/source/ruby-2.0.0-p247.tar.gz',
     cwd     => '~/source',
   }->
 
-  exec { 'configure_ruby'
+  exec { 'configure_ruby':
     command => 'configure',
     cwd     => '~/source/ruby-2.0.0-p247',
   }->
 
-  exec { 'make_ruby'
+  exec { 'make_ruby':
     command => 'make',
     cwd     => '~/source/ruby-2.0.0-p247',
   }->
 
-  exec { 'install_ruby'
+  exec { 'install_ruby':
     command => 'make install',
     cwd     => '~/source/ruby-2.0.0-p247',
   }
