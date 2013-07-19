@@ -33,7 +33,7 @@ class ruby-install {
   exec { 'make_ruby':
     command   => 'make',
     cwd       => '/root/source/ruby-2.0.0-p247',
-    timeout   => 480,
+    timeout   => 600,
     logoutput => true,
   }->
 
